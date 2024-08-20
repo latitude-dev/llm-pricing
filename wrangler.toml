@@ -1,5 +1,5 @@
 name = "llm-pricing-api"
-account_id = "${{ secrets.CF_ACCOUNT_ID }}"
+account_id = "${CF_ACCOUNT_ID}"
 compatibility_date = "2023-01-01"
 main = "worker.js"
 
