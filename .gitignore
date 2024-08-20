@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# Wrangler local configuration
+.wrangler/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+worker/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+*.swp
+*.swo
+.vscode/

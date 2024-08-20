@@ -1,0 +1,7 @@
+name = "llm-pricing-api"
+main = "worker.js"
+
+[
+triggers
+]
+crons = []
