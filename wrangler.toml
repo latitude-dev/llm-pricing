@@ -1,7 +1,6 @@
 name = "llm-pricing-api"
-main = "worker.js"
+account_id = ${{ secrets.CF_ACCOUNT_ID }}
+compatibility_date = "2023-01-01"
 
-[
-triggers
-]
-crons = []
+[env.production]
+workers_dev = true

@@ -12,11 +12,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install Wrangler
-      run: npm install -g @cloudflare/wrangler
+    - name: Install Latest Wrangler
+      run: npm install -g wrangler
 
     - name: Publish to Cloudflare
-      run: wrangler publish
+      run: wrangler deploy
       env:
         CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
