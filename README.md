@@ -112,9 +112,10 @@ To run this project locally:
 
 1. Install [wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update)
 2. Clone this repository
-3. Run `wrangler dev` in the project directory to start a local development server
-4. Make your changes and test them locally
-5. Deploy your changes using `wrangler publish`
+3. Rename `wrangler.template.toml` to `wrangler.toml` and replace the `account_id` with your Cloudflare account ID
+4. Run `wrangler dev` in the project directory to start a local development server
+5. Make your changes and test them locally
+6. Deploy your changes using `wrangler publish`
 
 ## Support
 
