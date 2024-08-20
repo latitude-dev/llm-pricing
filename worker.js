@@ -130,7 +130,7 @@ const pricing = {
               
               <div class="community-notice">
                   <p><strong>This is a community-maintained project!</strong> Help us keep the information up-to-date by contributing to the GitHub repository.</p>
-                  <a href="https://github.com/your-username/your-repo-name" class="github-link" target="_blank">Contribute on GitHub</a>
+                  <a href="https://github.com/latitude-dev/llm-pricing/" class="github-link" target="_blank">Contribute on GitHub</a>
               </div>
               
               <p>This API provides information about various Large Language Models (LLMs) and their pricing across different providers. The data is maintained by the community to ensure accuracy and timeliness.</p>
@@ -195,7 +195,7 @@ const pricing = {
   
               <h2>Contributing</h2>
               <p>As a community-maintained project, we welcome contributions to keep the pricing and model information up-to-date. If you notice any discrepancies or have information about new models, please contribute by submitting a pull request or opening an issue on our GitHub repository.</p>
-              <a href="https://github.com/your-username/your-repo-name" class="github-link" target="_blank">Contribute on GitHub</a>
+              <a href="https://github.com/latitude-dev/llm-pricing/" class="github-link" target="_blank">Contribute on GitHub</a>
   
               <footer>
                   <p>For more information or support, please contact the API administrator or open an issue on GitHub.</p>
