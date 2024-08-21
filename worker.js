@@ -141,10 +141,10 @@ const pricing = {
               <h2>Endpoints</h2>
               
               <h3>1. List Models</h3>
-              <p><strong>GET</strong> <code>/models</code></p>
+              <p><strong>GET</strong> <code>/api/models</code></p>
               <p>Returns a list of all available LLM models and their providers.</p>
               <p>Example request:</p>
-              <pre><code>curl ${domain}/models</code></pre>
+              <pre><code>curl ${domain}/api/models</code></pre>
               <p>Example response:</p>
               <pre><code>[
       {"name": "gpt-4", "provider": "OpenAI"},
@@ -153,7 +153,7 @@ const pricing = {
   ]</code></pre>
   
               <h3>2. Calculate Price</h3>
-              <p><strong>GET</strong> <code>/prices</code></p>
+              <p><strong>GET</strong> <code>/api/prices</code></p>
               <p>Calculates the price for a given model based on input and output tokens.</p>
               <p>Query Parameters:</p>
               <ul>
@@ -163,7 +163,7 @@ const pricing = {
                   <li><code>output_tokens</code>: Number of output tokens</li>
               </ul>
               <p>Example request:</p>
-              <pre><code>curl "${domain}/prices?provider=OpenAI&model=gpt-4&input_tokens=1000&output_tokens=500"</code></pre>
+              <pre><code>curl "${domain}/api/prices?provider=OpenAI&model=gpt-4&input_tokens=1000&output_tokens=500"</code></pre>
               <p>Example response:</p>
               <pre><code>{
       "provider": "OpenAI",
@@ -219,9 +219,9 @@ const pricing = {
   
       if (path === '/' || path === '') {
           return handleRootRequest(request);
-      } else if (path === '/models') {
+      } else if (path === '/api/models') {
           return handleModelsRequest();
-      } else if (path === '/prices') {
+      } else if (path === '/api/prices') {
           return handlePricesRequest(url.searchParams);
       } else {
           return new Response('Not Found', { status: 404 });
