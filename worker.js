@@ -146,11 +146,19 @@ const pricing = {
               <p>Example request:</p>
               <pre><code>curl ${domain}/api/models</code></pre>
               <p>Example response:</p>
-              <pre><code>[
-      {"name": "gpt-4", "provider": "OpenAI"},
-      {"name": "claude-3-opus-20240229", "provider": "Anthropic"},
+              <pre><code>{
+      "OpenAI": [
+          "gpt-4o",
+          "gpt-4o-2024-08-06",
+          ...
+      ],
+      "Anthropic": [
+          "claude-3-5-sonnet-20240620",
+          "claude-3-opus-20240229",
+          ...
+      ],
       ...
-  ]</code></pre>
+  }</code></pre>
   
               <h3>2. Calculate Price</h3>
               <p><strong>GET</strong> <code>/api/prices</code></p>
@@ -229,13 +237,11 @@ const pricing = {
   }
   
   function handleModelsRequest() {
-    const models = [];
+    const groupedModels = {};
     for (const [provider, providerModels] of Object.entries(pricing)) {
-        for (const modelName of Object.keys(providerModels)) {
-            models.push({ name: modelName, provider: provider });
-        }
+        groupedModels[provider] = Object.keys(providerModels);
     }
-    return new Response(JSON.stringify(models), {
+    return new Response(JSON.stringify(groupedModels), {
         headers: { 'Content-Type': 'application/json' }
     });
   }
